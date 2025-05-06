@@ -41,7 +41,6 @@ public class GlobalExceptionHandler {
 		responseStructure.setStatus(HttpStatus.CONFLICT.value());
 		return new ResponseEntity<>(responseStructure,HttpStatus.OK);
 	}
-	
 	public ResponseEntity<ResponseStructure> ConstraintViolationException(ConstraintViolationException a){
 		responseStructure.setMessage("Invaild Data Passed ");
 		responseStructure.setStatus(HttpStatus.BAD_REQUEST.value());
